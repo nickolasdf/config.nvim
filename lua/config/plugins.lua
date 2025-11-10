@@ -15,20 +15,19 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   'NMAC427/guess-indent.nvim',
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  { 'nvim-tree/nvim-web-devicons', opts = {} },
   require 'plugins.autopairs',
   require 'plugins.colorscheme',
-  require 'plugins.gitsigns',
-  require 'plugins.indent_line',
   require 'plugins.lint',
   require 'plugins.mini',
   require 'plugins.oil',
-  require 'plugins.telescope',
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.lsp.blink-cmp',
   require 'plugins.lsp.conform',
   require 'plugins.lsp.lazydev',
   require 'plugins.lsp.nvim-lspconfig',
+  require 'plugins.flash',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

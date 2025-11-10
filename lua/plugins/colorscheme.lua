@@ -3,22 +3,14 @@ return { -- You can easily change to a different colorscheme.
   -- change the command in the config to whatever the name of that colorscheme is.
   --
   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  'sainnhe/gruvbox-material',
+  'ellisonleao/gruvbox.nvim',
   lazy = false,
   priority = 1000, -- Make sure to load this before all the other start plugins.
   config = function()
+    require('gruvbox').setup {
+      contrast = 'hard',
+    }
     ---@diagnostic disable-next-line: missing-fields
-    ---require('gruvbox').setup {
-    ---}
-
-    -- Load the colorscheme here.
-    -- Like many other themes, this one has different styles, and you could load
-    -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-    vim.o.background = 'dark'
-    vim.g.gruvbox_material_enable_italic = true
-    vim.g.gruvbox_material_background = 'hard'
-    vim.g.gruvbox_material_better_performance = 1
-    vim.g.gruvbox_material_foreground = 'original'
-    vim.cmd.colorscheme 'gruvbox-material'
+    vim.cmd.colorscheme 'gruvbox'
   end,
 }
